@@ -1,15 +1,14 @@
 def main():
 
-    # Student's information: ID, Name, GradeLevel, Zip
-    student_list = [[1001, 'Bill', 'Senior', 94568],
-                    [1002, 'Kurt', 'Junior', 94598],
-                    [1003, 'Kim', 'Senior', 94598]]
+    dictionary1 = {10: "Kurt", 20: "Jim", 30: "Bill"}
+    print(dictionary1)
 
-    for value in zip(*student_list):
-        print(value)
+    IDlist, Namelist = zip(*dictionary1.items())
+    print(IDlist)  # tuple
+    print(Namelist)  # tuple
 
-    IDlist, Namelist, Glist, Zlist = zip(*student_list)
-    return IDlist, Zlist, Glist, Zlist
+    for v in zip(*Namelist):
+        print(v)
 
     #########################################
 
