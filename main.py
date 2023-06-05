@@ -1,7 +1,9 @@
 def getColumn(numbers):
-    retval = list(zip(*numbers))
-    retval = list(map(list, retval))
-    return retval
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
 
 
 def main():
