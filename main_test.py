@@ -17,8 +17,18 @@ def test_main_1():
     lines = captureOut.getvalue().split('\n')
     print(lines)
 
-    main.main()
-    assert True
+    numbers = [[10, 20, 30],
+               [40, 50, 60],
+               [70, 80, 90],
+               [100, 110, 120]]
+
+    ret = main.getColumn(numbers)
+    print(f'Your return value is: {ret}')
+    assert isinstance(ret, list)
+    assert isinstance(ret[0], list), 'The element of the list should be list'
+    assert ret[0] == [10, 40, 70, 100]
+    assert ret[1] == [20, 50, 80, 110]
+    assert ret[2] == [30, 60, 90, 120]
 
     # regex_string = r'[\w,\W]*1'
     # regex_string += r'[\w,\W]*3'
